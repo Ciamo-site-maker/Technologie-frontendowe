@@ -148,6 +148,186 @@
 <hr>
 <h1>Zadanie 4</h1>
 <hr>
+<h1>Moja galeria multimedialna</h1>
+
+  <!-- Sekcja A: obrazy przez IMG -->
+  <section>
+    <h2>Obrazy (img)</h2>
+
+    <!-- Obraz 1 -->
+    <img src="images/krajobraz1.jpg" alt="Krajobraz górski o zachodzie słońca" width="420" height="280">
+
+    <!-- Obraz 2 (lazy loading) -->
+    <img src="images/krajobraz2.jpg" alt="Jezioro w lesie" width="420" height="280" loading="lazy">
+
+    <!-- Obraz 3 -->
+    <img src="images/krajobraz3.jpg" alt="Miasto nocą z panoramą" width="420" height="280">
+  </section>
+
+  <!-- Sekcja A: figure + figcaption -->
+  <section>
+    <h2>Obrazy (figure)</h2>
+
+    <figure>
+      <img src="images/figure1.jpg" alt="Aparat fotograficzny na biurku" width="420" height="280">
+      <figcaption>Zdjęcie 1: aparat – przykład użycia figure + figcaption.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/figure2.jpg" alt="Kawa i notatnik" width="420" height="280" loading="lazy">
+      <figcaption>Zdjęcie 2: kawa i notatki – lazy loading w figure.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Sekcja B: wideo -->
+  <section>
+    <h2>Wideo</h2>
+    <!-- controls = kontrolki, poster = miniaturka przed odtworzeniem -->
+    <video controls width="640" height="360" poster="images/video-poster.jpg">
+      <source src="media/film.mp4" type="video/mp4">
+      <source src="media/film.webm" type="video/webm">
+      
+    </video>
+  </section>
+
+  <!-- Sekcja C: audio -->
+  <section>
+    <h2>Audio</h2>
+    <audio controls>
+      <source src="media/audio.mp3" type="audio/mpeg">
+      <source src="media/audio.ogg" type="audio/ogg">
+     
+    </audio>
+  </section>
+
+  <!-- Sekcja D: iframe -->
+  <section>
+    <h2>Osadzona treść</h2>
+    <!-- Atrybuty bezpieczeństwa: title, loading, referrerpolicy, allow -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
+      title="YouTube video"
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+<hr>
+<h1>Zadanie 5</h1>
+<hr>
+    <!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zadanie 5 – formularz kontaktowy z walidacją HTML5.">
+  <meta name="author" content="Twoje Imię i Nazwisko">
+  <title>Zadanie 5 – Formularz</title>
+</head>
+<body>
+  <h1>Formularz kontaktowy</h1>
+
+  <form action="#" method="post" enctype="multipart/form-data" data-form="kontakt-v1">
+    <fieldset>
+      <legend>Dane podstawowe</legend>
+
+      <p>
+        <label for="fullName">Imię i nazwisko:</label><br>
+        <input id="fullName" name="fullName" type="text" required minlength="3" autocomplete="name">
+      </p>
+
+      <p>
+        <label for="email">Email:</label><br>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+          placeholder="np. jan.kowalski@example.com"
+          autocomplete="email">
+      </p>
+
+      <p>
+        <label for="phone">Telefon (opcjonalnie):</label><br>
+        <input id="phone" name="phone" type="tel" placeholder="+48 123 456 789" autocomplete="tel">
+      </p>
+
+      <p>
+        <label for="birthDate">Data urodzenia:</label><br>
+        <input id="birthDate" name="birthDate" type="date" required>
+      </p>
+
+      <p>
+        <label for="password">Hasło:</label><br>
+        <input id="password" name="password" type="password" required minlength="8" autocomplete="new-password">
+      </p>
+
+      <p>
+        <label for="password2">Potwierdź hasło:</label><br>
+        <input id="password2" name="password2" type="password" required minlength="8" autocomplete="new-password">
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Wybory</legend>
+
+      <p>Płeć:</p>
+      <p>
+        <input id="genderF" name="gender" type="radio" value="female" required>
+        <label for="genderF">Kobieta</label><br>
+
+        <input id="genderM" name="gender" type="radio" value="male">
+        <label for="genderM">Mężczyzna</label><br>
+
+        <input id="genderO" name="gender" type="radio" value="other">
+        <label for="genderO">Inna / nie podaję</label>
+      </p>
+
+      <p>Zainteresowania (min. 5 opcji):</p>
+      <p>
+        <input id="int1" name="interests" type="checkbox" value="frontend">
+        <label for="int1">Front-end</label><br>
+
+        <input id="int2" name="interests" type="checkbox" value="backend">
+        <label for="int2">Back-end</label><br>
+
+        <input id="int3" name="interests" type="checkbox" value="ux">
+        <label for="int3">UX/UI</label><br>
+
+        <input id="int4" name="interests" type="checkbox" value="testing">
+        <label for="int4">Testowanie</label><br>
+
+        <input id="int5" name="interests" type="checkbox" value="security">
+        <label for="int5">Bezpieczeństwo</label>
+      </p>
+
+      <p>
+        <label for="country">Kraj:</label><br>
+        <select id="country" name="country" required>
+          <option value="">— wybierz —</option>
+          <option>Polska</option>
+          <option>Niemcy</option>
+          <option>Czechy</option>
+          <option>Słowacja</option>
+          <option>Francja</option>
+          <option>Hiszpania</option>
+          <option>Włochy</option>
+          <option>Holandia</option>
+          <option>Szwecja</option>
+          <option>Norwegia</option>
+        </select>
+      </p>
+
+    </fieldset>
+
+ 
+</body>
+</html>
 
 
         

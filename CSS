@@ -1,0 +1,337 @@
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 700px at 10% 0%, rgba(124, 92, 255, 0.18), transparent 55%),
+    radial-gradient(900px 520px at 90% 10%, rgba(34, 197, 94, 0.12), transparent 55%),
+    linear-gradient(180deg, #0b0e1a, var(--bg));
+  padding: 28px 16px 60px;
+}
+
+body > * {
+  max-width: var(--max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--line);
+  margin: 18px auto;
+  max-width: var(--max);
+}
+
+
+h1, h2, h3 {
+  line-height: 1.2;
+  margin: 18px auto 10px;
+  letter-spacing: 0.2px;
+}
+
+h1 {
+  font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2.1rem);
+}
+
+h2 {
+  font-size: clamp(1.15rem, 1.0rem + 0.7vw, 1.55rem);
+  color: var(--muted);
+}
+
+h3 {
+  font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.25rem);
+  color: rgba(233, 236, 255, 0.92);
+}
+
+p {
+  margin: 8px auto 12px;
+  color: rgba(233, 236, 255, 0.92);
+}
+
+strong {
+  color: #ffffff;
+}
+
+em {
+  color: rgba(233, 236, 255, 0.85);
+}
+
+blockquote {
+  margin: 14px auto;
+  padding: 14px 16px;
+  border-left: 4px solid var(--accent);
+  background: rgba(124, 92, 255, 0.10);
+  border-radius: 10px;
+  box-shadow: var(--shadow-soft);
+  max-width: var(--max);
+}
+
+blockquote::before {
+  content: "“";
+  font-size: 2rem;
+  line-height: 0;
+  vertical-align: -0.3em;
+  margin-right: 6px;
+  color: rgba(124, 92, 255, 0.9);
+}
+
+a {
+  color: #c7b9ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid rgba(124, 92, 255, 0.9);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+
+ol, ul, dl, table, section, form {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 16px;
+  margin: 14px auto;
+  max-width: var(--max);
+}
+
+Zadanie 1
+ol {
+  padding-left: 22px;
+}
+
+ol > li {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+ol > p {
+  margin: 6px 0 12px 0;
+  color: rgba(233, 236, 255, 0.88);
+}
+
+ul {
+  padding-left: 22px;
+}
+
+ul li {
+  margin: 6px 0;
+}
+
+dl dt {
+  margin-top: 10px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+dl dd {
+  margin: 6px 0 10px 0;
+  color: rgba(233, 236, 255, 0.88);
+}
+
+
+ol ol, ol ul, ul ul, ul ol {
+  margin-top: 10px;
+  background: rgba(0,0,0,0.18);
+  border-radius: 12px;
+  border: 1px dashed rgba(255,255,255,0.12);
+}
+
+Zadanie 3
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+table th,
+table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  vertical-align: top;
+}
+
+table th {
+  text-align: left;
+  background: rgba(124, 92, 255, 0.16);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+table tr:hover td {
+  background: rgba(255,255,255,0.03);
+}
+
+
+#tabela-tagow {
+  margin-top: 18px;
+}
+
+.tabela-html .naglowek-tabeli th {
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size: 0.9rem;
+}
+
+Zadanie 4
+
+section h2 {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: var(--shadow-soft);
+}
+
+section img {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+}
+
+figure {
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+figcaption {
+  margin-top: 10px;
+  color: rgba(233, 236, 255, 0.78);
+  font-size: 0.95rem;
+}
+
+video, audio, iframe {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: var(--shadow-soft);
+  background: #000;
+}
+
+audio {
+  padding: 6px;
+  background: rgba(0,0,0,0.25);
+}
+
+
+Form (Zadanie 5)
+
+form {
+  display: grid;
+  gap: 14px;
+}
+
+fieldset {
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(0,0,0,0.16);
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+label {
+  font-weight: 650;
+  color: rgba(233, 236, 255, 0.92);
+}
+
+input, select, textarea, button {
+  font: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+input[type="url"],
+select,
+textarea {
+  width: min(560px, 100%);
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(10, 12, 22, 0.65);
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid rgba(124, 92, 255, 0.85);
+  outline-offset: 2px;
+}
+
+/* Radio/checkbox ładniej w kolumnie */
+input[type="radio"],
+input[type="checkbox"] {
+  transform: translateY(1px);
+}
+
+p {
+  max-width: var(--max);
+}
+
+/* Delikatna walidacja wizualna (HTML5) */
+input:required:invalid {
+  border-color: rgba(239, 68, 68, 0.65);
+}
+
+input:required:valid {
+  border-color: rgba(34, 197, 94, 0.55);
+}
+
+
+   Small screens
+
+@media (max-width: 640px) {
+  body {
+    padding: 18px 12px 44px;
+  }
+
+  ol, ul, dl, table, section, form {
+    padding: 14px;
+  }
+
+  section img {
+    margin-right: 0;
+    display: block;
+  }
+}
